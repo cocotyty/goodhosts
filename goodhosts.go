@@ -109,6 +109,7 @@ func (h Hosts) Flush() error {
 	}
 
 	err = w.Flush()
+	file.Close()
 	if err != nil {
 		return err
 	}
